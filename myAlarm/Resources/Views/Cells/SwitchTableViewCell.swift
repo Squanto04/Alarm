@@ -33,6 +33,7 @@ class SwitchTableViewCell: UITableViewCell {
     // MARK: -Actions
     @IBAction func alarmSwitch(_ sender: Any) {
         delegate?.enabledValueChanged(self, selected: alarmSwitch.isOn)
+        AlarmController.sharedInstance.savetoPresistantStore()
     }
 
     func updateViews() {
